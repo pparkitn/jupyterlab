@@ -38,3 +38,6 @@ sudo systemctl enable containerd.service
 
 # Start Jupyter Lab
 sudo docker run -p 8888:8888 -v $(pwd):/home pparkitn/jupyterlab jupyter-lab --ip 0.0.0.0 --allow-root --no-browser --NotebookApp.token=''
+
+# Open Jupyter Lab 
+http://127.0.0.1:8888/lab
