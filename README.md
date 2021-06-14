@@ -5,15 +5,18 @@ Download gcloud
 https://cloud.google.com/sdk/docs/downloads-versioned-archives
 https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-342.0.0-windows-x86_64-bundled-python.zip
 
+```
 \google-cloud-sdk\install.bat
 .\google-cloud-sdk\bin\gcloud init
-
+```
 
 Start VM
 
 
 Connect to VM
+```
 gcloud compute ssh sxm-peter-1 --ssh-flag="-L 8888:127.0.0.1:8888"
+```
 
 # Install Docker
 ```
