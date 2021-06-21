@@ -1,22 +1,39 @@
-Build v-machine using google console
-Stop It
+# Setup gcloud
 
-Download gcloud
+## Setup Notebook
+- Build v-machine using google console
+- Stop It
+
+## Download gcloud
+```
 https://cloud.google.com/sdk/docs/downloads-versioned-archives
 https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-342.0.0-windows-x86_64-bundled-python.zip
+```
 
+## Setup gcloud
 ```
 \google-cloud-sdk\install.bat
 .\google-cloud-sdk\bin\gcloud init
 ```
 
-Start VM
+## Start VM
+```
+gcloud compute instances list
+gcloud compute instances start notebookname --zone=us-west1-b 
+```
+
+## Connect to VM
+```
+gcloud compute ssh notebookname --ssh-flag="-L 8888:127.0.0.1:8888"
+```
+
+## Open Jupyter Lab 
+```
+http://127.0.0.1:8888/lab
+```
 
 
-Connect to VM
-```
-gcloud compute ssh sxm-peter-1 --ssh-flag="-L 8888:127.0.0.1:8888"
-```
+
 
 # Install Docker
 ```
@@ -89,9 +106,4 @@ services:
 
 ```
 docker-compose up
-```
-
-# Open Jupyter Lab 
-```
-http://127.0.0.1:8888/lab
 ```
