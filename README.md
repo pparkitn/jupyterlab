@@ -2,7 +2,7 @@
 
 ## Setup Notebook
 - Build v-machine using google console
-- Stop It
+- Change disk to 50 GB
 
 ## Download gcloud
 ```
