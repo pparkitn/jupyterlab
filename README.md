@@ -62,6 +62,7 @@ sudo docker run -p 8888:8888 -v $(pwd):/home pparkitn/jupyterlab jupyter-lab --i
 ```
 
 # Start Jupyter Lab:  Spark
+-Paste this into bash
 ```
 export GID=1001
 cat > docker-compose.yaml << EOF
@@ -87,6 +88,7 @@ services:
     volumes:
       - .:/home/$USER
 ```
+-type EOF and press enter
 
 ```
 docker-compose up
