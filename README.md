@@ -4,35 +4,19 @@
 - Build v-machine using google console
 - Change disk to 50 GB
 
-## Download gcloud
+## Generate SSH Key
 ```
-https://cloud.google.com/sdk/docs/downloads-versioned-archives
-https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-342.0.0-windows-x86_64-bundled-python.zip
-```
-
-## Setup gcloud
-```
-\google-cloud-sdk\install.bat
-.\google-cloud-sdk\bin\gcloud init
+ssh-keygen -t rsa -f google_keyfile -C username
 ```
 
-## Start VM
-```
-gcloud compute instances list
-gcloud compute instances start notebookname --zone=us-west1-b 
-```
-
-## Connect to VM
-```
-gcloud compute ssh notebookname --ssh-flag="-L 8888:127.0.0.1:8888"
-```
-
-## Open Jupyter Lab 
-```
-http://127.0.0.1:8888/lab
-```
+## ADD Key To Metadata
+- Paste what is inside google_keyfile.pub into the metadata on Compute Engine
 
 
+## Connect To VM Box
+'''
+ssh -i google_keyfile -o UserKnownHostsFile=/dev/null -o CheckHostIP=no -o StrictHostKeyChecking=no username@IP
+'''
 
 
 # Install Docker
