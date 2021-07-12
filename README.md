@@ -56,12 +56,12 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.29.1/docker-
 sudo chmod +x /usr/local/bin/docker-compose
 ```
 
-# Start Jupyter Lab
+# Start Jupyter Lab: Python
 ```
 sudo docker run -p 8888:8888 -v $(pwd):/home pparkitn/jupyterlab jupyter-lab --ip 0.0.0.0 --allow-root --no-browser --NotebookApp.token=''
 ```
 
-# Docker Compose Way
+# Start Jupyter Lab:  Spark
 ```
 export GID=1001
 cat > docker-compose.yaml << EOF
