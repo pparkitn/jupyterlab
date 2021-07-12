@@ -93,3 +93,21 @@ services:
 ```
 sudo docker-compose up
 ```
+
+## Jupyter Lab
+-Paste into notebook and run to make sure spark works
+```
+# start Spark Session (RUN THIS CELL AS IS)
+from pyspark.sql import SparkSession
+app_name = "hw3_notebook"
+master = "local[*]"
+spark = SparkSession\
+        .builder\
+        .appName(app_name)\
+        .master(master)\
+        .getOrCreate()
+sc = spark.sparkContext
+
+# Spark configuration Information (RUN THIS CELL AS IS)
+sc.getConf().getAll()
+```
