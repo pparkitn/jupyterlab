@@ -91,5 +91,5 @@ services:
 -type EOF and press enter
 
 ```
-docker-compose up
+sudo docker-compose up
 ```
