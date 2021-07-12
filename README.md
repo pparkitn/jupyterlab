@@ -15,7 +15,7 @@ ssh-keygen -t rsa -f google_keyfile -C username
 
 ## Connect To VM Box
 ```
-ssh -i google_keyfile -o UserKnownHostsFile=/dev/null -o CheckHostIP=no -o StrictHostKeyChecking=no username@IP
+ssh -L 8889:127.0.0.1:8889 -i google_keyfile -o UserKnownHostsFile=/dev/null -o CheckHostIP=no -o StrictHostKeyChecking=no username@IP
 ```
 
 
@@ -58,7 +58,7 @@ sudo chmod +x /usr/local/bin/docker-compose
 
 # Start Jupyter Lab: Python
 ```
-sudo docker run -p 8888:8888 -v $(pwd):/home pparkitn/jupyterlab jupyter-lab --ip 0.0.0.0 --allow-root --no-browser --NotebookApp.token=''
+sudo docker run -p 8889:8889 -v $(pwd):/home pparkitn/jupyterlab jupyter-lab --ip 0.0.0.0 --allow-root --no-browser --port 8889 --NotebookApp.token=''
 ```
 
 # Start Jupyter Lab:  Spark
