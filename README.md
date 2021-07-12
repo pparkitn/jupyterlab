@@ -14,9 +14,9 @@ ssh-keygen -t rsa -f google_keyfile -C username
 
 
 ## Connect To VM Box
-'''
+```
 ssh -i google_keyfile -o UserKnownHostsFile=/dev/null -o CheckHostIP=no -o StrictHostKeyChecking=no username@IP
-'''
+```
 
 
 # Install Docker
