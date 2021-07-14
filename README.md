@@ -1,6 +1,6 @@
 # Setup gcloud
 
-## Setup Notebook
+## Setup VM
 - Build v-machine using google console
 - Change disk to 50 GB
 
