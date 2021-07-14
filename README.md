@@ -99,7 +99,7 @@ sudo docker-compose up
 ```
 # start Spark Session (RUN THIS CELL AS IS)
 from pyspark.sql import SparkSession
-app_name = "hw3_notebook"
+app_name = "SXM_notebook"
 master = "local[*]"
 spark = SparkSession\
         .builder\
